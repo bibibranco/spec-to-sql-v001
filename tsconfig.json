@@ -4,6 +4,7 @@
     "module": "commonjs",
     "lib": ["es2019", "dom"],
     "moduleResolution": "node",
+    "types": ["@figma/plugin-typings"],
     "strict": true,
     "noEmitOnError": false,
     "outDir": "dist",

@@ -3,12 +3,13 @@
   "id": "tagueamento-localhost",
   "api": "1.0.0",
   "main": "dist/code.js",
+  "ui": "dist/ui.html",
   "editorType": ["figma", "figjam"],
   "permissions": [],
   "capabilities": [],
   "networkAccess": {
     "allowedDomains": [],
     "reasoning": "This plugin needs to access the internet to get the latest data from the server and to access the local host.",
-    "devAllowedDomains": ["http://localhost:5173"]
+    "devAllowedDomains": ["http://localhost:3000", "http://localhost:5173"]
   }
 }

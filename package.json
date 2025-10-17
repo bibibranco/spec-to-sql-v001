@@ -1,0 +1,17 @@
+{
+  "name": "spec-to-sql-v001",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "node ./scripts/build.mjs",
+    "watch": "node ./scripts/build.mjs --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.86.0",
+    "esbuild": "^0.21.4",
+    "typescript": "^5.4.5"
+  }
+}

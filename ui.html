@@ -5,13 +5,19 @@
     <title>Plugin UI</title>
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'none'; script-src 'unsafe-inline'; connect-src http: https:; frame-src http://localhost:3000; style-src 'unsafe-inline';"
+      content="default-src 'none'; img-src data:; script-src 'self' 'unsafe-eval'; connect-src http: https:; frame-src http://localhost:3000; style-src 'unsafe-inline';"
     />
     <style>
-      html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
-    <script type="module" src="/src/ui/main.ts"></script>
+    <script src="./ui.js" type="module"></script>
   </body>
 </html>
