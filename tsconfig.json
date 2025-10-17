@@ -13,3 +13,16 @@
   },
   "include": ["src"]
 }
+
+
+
+{
+  "main": "dist/code.js",
+  "scripts": {
+    "build": "npm run build:code && npm run build:ui && npm run build:html",
+    "build:code": "esbuild src/code.ts --bundle --outfile=dist/code.js --platform=browser --target=es2018 --format=iife",
+    "build:ui": "esbuild src/ui/main.ts --bundle --outfile=dist/ui.js --platform=browser --target=es2018 --format=iife",
+    "build:html": "node -e \"require('fs').writeFileSync('dist/ui.html', require('fs').readFileSync('src/ui/index.html','utf8').replace('</body>', '<script src=\\\"./ui.js\\\"></script></body>'))\"",
+    "watch": "npm run build -- --watch"
+  }
+}
